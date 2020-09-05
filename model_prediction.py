@@ -84,6 +84,12 @@ for row in range(12,im_height-12):
 print("number of DongGuan:\n",number)
 
 # Get the processed data
+# The data named"ample_final_XX_2L.txt" is the features which contains 
+# initial land use state, neighborhood proportion, slope, elevation and distance-based variables.
+# Initial land use state, neighborhood proportion are calculated by each year's data.
+# Slope, elevation and distance-based variables of each year are same.
+
+# Data of "Labels_XX.txt" is the label which represents land use state of next time step, using one-hot enconding.
 Sample_final_00_2L = np.loadtxt('Sample_final_00_2L.txt')
 Label_Samples_00 = np.loadtxt('Labels_00.txt')
 
@@ -205,7 +211,7 @@ for row in range(12,im_height-12):
     for col in range(12,im_width-12):
         if im_data_land08[row][col] != 0:
             if im_data_land08[row,col] != im_data_land09[row,col]:
-                # The label of nochange is 0£¬the label of change is 1
+                # The label of nochange is 0Â£Â¬the label of change is 1
                 Label_change_08_RF[index_change_08,0] = 1
                 
             index_change_08 = index_change_08 + 1
