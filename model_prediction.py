@@ -84,7 +84,7 @@ for row in range(12,im_height-12):
 print("number of DongGuan:\n",number)
 
 # Get the processed data
-# The data named"ample_final_XX_2L.txt" is the features which contains 
+# The data named"Sample_final_XX_2L.txt" is the features which contains 
 # initial land use state, neighborhood proportion, slope, elevation and distance-based variables.
 # Initial land use state, neighborhood proportion are calculated by each year's data.
 # Slope, elevation and distance-based variables of each year are same.
